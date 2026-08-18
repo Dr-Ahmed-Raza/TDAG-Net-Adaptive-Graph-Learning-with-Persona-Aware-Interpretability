@@ -1,0 +1,26 @@
+{
+  "ingest_2023_files_done": 17,
+  "_updated": "2026-08-04T18:04:07",
+  "tensors_ready": true,
+  "features_ready": true,
+  "eda_figures_ready": true,
+  "experiments_done": [
+    "LSTM",
+    "TCN",
+    "ConvLSTM",
+    "SVR-LSTM",
+    "STGCN",
+    "DCRNN",
+    "Graph WaveNet",
+    "AGCRN",
+    "TGALSTM",
+    "TDAG-Net (Input-Splitter)",
+    "TDAG-Net",
+    "TDAG-Net (ours)",
+    "TDAG-Net w/o TD-PDM",
+    "TDAG-Net w/o PC-HGAT",
+    "TDAG-Net w/o EC-AAM",
+    "TDAG-Net w/o Adaptive"
+  ],
+  "pipeline_complete": true
+}

@@ -1,0 +1,15 @@
+model,params,ok
+LSTM,201228,True
+TCN,60844,True
+ConvLSTM,51724,True
+SVR-LSTM,69644,True
+STGCN,38796,True
+DCRNN,64140,True
+Graph WaveNet,65068,True
+AGCRN,258050,True
+TGALSTM,210527,True
+TDAG-Net,285477,True
+TDAG-Net w/o TD-PDM,254260,True
+TDAG-Net w/o PC-HGAT,285477,True
+TDAG-Net w/o EC-AAM,285477,True
+TDAG-Net w/o Adaptive,285477,True

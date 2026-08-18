@@ -1,0 +1,53 @@
+\begin{table}[!t]
+\caption{Network-wide prediction performance on the Nanjing 2023 AFC test set (191 stations, 10-min intervals, horizon 6 steps). Huber $\delta=1.0$.}
+\label{tab:main_results}
+\centering
+\footnotesize
+\begin{tabular}{lrrrrrrr}
+\toprule
+Model & RMSE & MAE & WMAPE & R2 & EPE & NDE & Params \\
+\midrule
+LSTM & 47.553 & 18.367 & 25.03 & 0.8868 & 19.11 & 29.86 & 201,228 \\
+TCN & 42.450 & 17.192 & 23.42 & 0.9098 & 18.67 & 26.65 & 60,844 \\
+ConvLSTM & 40.040 & 16.534 & 22.53 & 0.9198 & 19.22 & 25.14 & 51,724 \\
+SVR-LSTM & 48.859 & 18.872 & 25.71 & 0.8805 & 19.72 & 30.68 & 69,644 \\
+STGCN & 40.673 & 16.892 & 23.02 & 0.9172 & 17.89 & 25.54 & 38,796 \\
+DCRNN & 39.340 & 16.517 & 22.51 & 0.9225 & 18.28 & 24.70 & 64,140 \\
+Graph WaveNet & 35.656 & 15.314 & 20.87 & 0.9364 & 17.29 & 22.39 & 65,068 \\
+AGCRN & \textbf{30.867} & \textbf{13.488} & \textbf{18.38} & \textbf{0.9523} & 16.48 & \textbf{19.38} & 258,050 \\
+TGALSTM & 35.216 & 15.233 & 20.76 & 0.9379 & 17.38 & 22.11 & 210,527 \\
+TDAG-Net (Input-Splitter) & 35.258 & 15.846 & 21.59 & 0.9378 & 16.71 & 22.14 & 285,477 \\
+TDAG-Net (ours) & 31.948 & 14.001 & 19.08 & 0.9489 & \textbf{16.08} & 20.06 & 254,260 \\
+TDAG-Net w/o PC-HGAT & 34.655 & 15.504 & 21.12 & 0.9399 & 16.65 & 21.76 & 285,477 \\
+TDAG-Net w/o EC-AAM & 34.655 & 15.504 & 21.12 & 0.9399 & 16.65 & 21.76 & 285,477 \\
+TDAG-Net w/o Adaptive & 34.681 & 15.614 & 21.28 & 0.9398 & 17.31 & 21.77 & 285,477 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[!t]
+\caption{Performance restricted to flagged event days.}
+\label{tab:event_results}
+\centering
+\footnotesize
+\begin{tabular}{lrrrrrr}
+\toprule
+Model & RMSE & MAE & WMAPE & R2 & EPE & NDE \\
+\midrule
+LSTM & 39.367 & 17.094 & 24.46 & 0.9109 & 19.11 & 26.38 \\
+TCN & 38.334 & 16.367 & 23.42 & 0.9155 & 18.67 & 25.69 \\
+ConvLSTM & 39.055 & 16.684 & 23.88 & 0.9123 & 19.22 & 26.17 \\
+SVR-LSTM & 40.761 & 17.671 & 25.29 & 0.9045 & 19.72 & 27.31 \\
+STGCN & 36.405 & 15.788 & 22.59 & 0.9238 & 17.89 & 24.39 \\
+DCRNN & 37.333 & 16.163 & 23.13 & 0.9199 & 18.28 & 25.01 \\
+Graph WaveNet & 34.389 & 14.764 & 21.13 & 0.9320 & 17.29 & 23.04 \\
+AGCRN & 33.995 & 14.518 & 20.78 & 0.9335 & 16.48 & 22.78 \\
+TGALSTM & 35.646 & 15.467 & 22.13 & 0.9269 & 17.38 & 23.88 \\
+TDAG-Net (Input-Splitter) & 33.841 & 15.329 & 21.94 & 0.9342 & 16.71 & 22.67 \\
+TDAG-Net (ours) & \textbf{32.307} & \textbf{14.023} & \textbf{20.07} & \textbf{0.9400} & \textbf{16.08} & \textbf{21.65} \\
+TDAG-Net w/o PC-HGAT & 33.800 & 15.135 & 21.66 & 0.9343 & 16.65 & 22.65 \\
+TDAG-Net w/o EC-AAM & 33.800 & 15.135 & 21.66 & 0.9343 & 16.65 & 22.65 \\
+TDAG-Net w/o Adaptive & 34.924 & 15.715 & 22.49 & 0.9299 & 17.31 & 23.40 \\
+\bottomrule
+\end{tabular}
+\end{table}
